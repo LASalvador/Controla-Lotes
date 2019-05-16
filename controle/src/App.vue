@@ -2,7 +2,7 @@
   <v-app id="inpire">
     <app-header/>
     <v-content>
-      
+      <router-view ></router-view>
     </v-content>
     <app-footer/>
   </v-app>

@@ -15,7 +15,7 @@ export default [
   },
   {
     path: '/lot/update',
-    component: Updates
+    component: Update
   },
   {
     path: '/lot/create',

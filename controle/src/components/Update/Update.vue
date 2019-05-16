@@ -1,5 +1,7 @@
 <template>
- <h1>Update Lot</h1>
+  <v-content>
+    <h1>Update Lot</h1>
+  </v-content>
 </template>
 <style scoped>
 
