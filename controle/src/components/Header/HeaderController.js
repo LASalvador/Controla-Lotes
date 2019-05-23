@@ -6,7 +6,7 @@ export default {
         { title: 'Cria lote', rota: '/lot/create'},
         { title: 'Pesquisar Lote', rota: '/search'},
         { title: 'Atualizar Lote', rota: '/lot/update'},
-        { title: 'Dashboard', rota: '/'},
+        { title: 'Dashboard', rota: '/dashboard'},
 
       ]
     }),

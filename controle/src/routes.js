@@ -2,6 +2,7 @@ import Create from './components/Create/Create.vue'
 import Home from './components/Home/Home.vue'
 import Search from './components/Search/Search.vue'
 import Update from './components/Update/Update.vue'
+import DashBoard from './components/Dashboard/Dashboard.vue'
 
 
 export default [
@@ -24,5 +25,9 @@ export default [
   {
     path: '/search',
     component: Search
+  },
+  {
+    path: '/dashboard',
+    component: DashBoard
   }
 ]

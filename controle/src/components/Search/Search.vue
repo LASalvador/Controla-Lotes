@@ -15,6 +15,7 @@
       <v-flex xs12 sm12 md5>
         <v-card
         color="indigo"
+        class="white--text"
         v-if="card_visible">
           <v-card-title>ID: 123</v-card-title>
           <v-card-text>
