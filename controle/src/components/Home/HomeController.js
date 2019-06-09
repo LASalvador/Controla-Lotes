@@ -1,21 +1,14 @@
 export default {
-    data: () => ({
-      drawer: false,
-      lotes: [
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em espera', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em espera', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em espera', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em produção', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'terminada', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'terminada', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'terminada', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'terminada', id_lote: '012' },
-        {produto: 'Dentadura', local_atual: 'Lavagem', status: 'Em espera', id_lote: '012' },
-      ]
-    }),
-  }
+    data() {
+        return {
+          drawer: false,
+          lotes: []
+        }
+      },
+    created() {
+        this.$http.get('http://localhost:8081/home').then(function(data) {
+            this.lotes = data.body;
+        })
+    }
+
+}

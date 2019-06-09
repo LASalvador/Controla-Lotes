@@ -8,11 +8,11 @@
          ></v-text-field>
        </v-flex>
       <v-flex xs12 sm6 md1>
-        <v-btn icon @click="card_visible = !card_visible ">
+        <v-btn icon @click=" pesquisarLote ">
           <v-icon>search</v-icon>
         </v-btn>
       </v-flex>
-      <v-flex xs12 sm12 md5>
+      <!-- <v-flex xs12 sm12 md5>
         <v-card
         color="indigo"
         class="white--text"
@@ -30,7 +30,7 @@
           <b>trajeto: </b>Lavagem -> aspiragem -> teste -> fim<br>
           </v-card-text>
         </v-card>
-      </v-flex>
+      </v-flex> -->
 
     </v-layout>
   </v-content>

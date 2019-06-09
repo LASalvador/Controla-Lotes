@@ -12,10 +12,10 @@ export default {
 
     methods: {
         increment() {
-            this.foo = parseInt(this.foo, 10) + 1
+            this.quantidade = parseInt(this.quantidade, 10) + 1
         },
         decrement() {
-            this.foo = parseInt(this.foo, 10) - 1
+            this.quantidade = parseInt(this.quantidade, 10) - 1
 
         },
         enviar_dados(){
