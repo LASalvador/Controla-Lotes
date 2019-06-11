@@ -3,6 +3,10 @@
     <v-layout wrap>
   <v-flex xs12 sm12 md3 ml-5>
     <v-text-field
+      label="Codigo"
+      placeholder=" Ex: 5553">
+    </v-text-field>
+    <v-text-field
       label="Produto"
       placeholder=" Ex: Prótese dentária">
     </v-text-field>
@@ -15,7 +19,7 @@
         <v-checkbox v-model="checkbox5" :label="`Lavagem 2`"></v-checkbox>
         <v-checkbox v-model="checkbox6" :label="`Sala limpa`"></v-checkbox>
         <v-checkbox v-model="checkbox7" :label="`Embalagem`"></v-checkbox>
-      <v-btn icon @click="enviar_dados"></v-btn>
+      <v-btn color="indigo" @click="enviar_dados">Cadastrar Lote</v-btn>
       </v-flex>
     </v-layout>
   </v-content>

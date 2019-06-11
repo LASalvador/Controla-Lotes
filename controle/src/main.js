@@ -6,6 +6,8 @@ import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import Routes from './routes'
 
+
+
 Vue.use(Vuetify)
 Vue.use(VueResource)
 Vue.use(VueRouter)

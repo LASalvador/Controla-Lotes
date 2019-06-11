@@ -8,6 +8,8 @@ export default {
         checkbox5: 0,
         checkbox6: 0,
         checkbox7: 0,
+        codigo: '',
+        produto: ''
     }),
 
     methods: {
@@ -41,12 +43,19 @@ export default {
             if (this.checkbox7){
                 trajeto += 'Embalagem;';
             }
-        this.$http.post('http://localhost:8081', {
-            produto: this.produto,
-            quantidade: this.quantidade,
+            let headers = {
+                'Access-Control-Allow-Methods': 'GET,POST,PUT,DEL',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+            }
+        this.$http.post('http://localhost:8081/lot/create/', {
+            cod_lote: this.codigo,
+            id_produto: this.produto,
+            quantidade_produtos: this.quantidade,
             trajeto: trajeto
-        }).then(function(data) {
+        }, headers).then(function(data) {
             console.log(data);
+            alert('Sucesso');
         })},
 
     }
