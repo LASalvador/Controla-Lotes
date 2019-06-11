@@ -2,8 +2,11 @@ export default {
   data() {
     return {
       card_visible: false,
+      id: '',
+      lote: '',
       situacao: '',
       responsavel: '',
+      maquina: '',
       trajetos: ['Produção','Lavagem','Jateamento','Inspecao','Sala limpa','Embalagem'],
       local: '',
       situacoes: ['Em espera','Em processo','Terminada'],
@@ -15,6 +18,25 @@ export default {
 					}
 
 			}
+    }
+  },
+  methods: {
+    selecionarLote: function() {
+      this.$http.get('http://localhost:8081/search/'+this.id).then(function(data) {
+      this.lote = data.body;
+      this.card_visible = true;
+    })
+    },
+    atualizarLote: function() {
+      this.$http.put('http://localhost:8081/lot/update/'+this.id, {
+        cod_lote: this.id,
+        responsavel: this.responsavel,
+        status: this.situacao,
+        etapa: this.etapa,
+        maquina: this.maquina
+      }).then(function(data){
+        alert('Atualizado com sucesso');
+      }).catch(err => alert(err));
     }
   }
 }

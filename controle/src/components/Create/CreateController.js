@@ -43,14 +43,12 @@ export default {
             if (this.checkbox7){
                 trajeto += 'Embalagem;';
             }
-            console.log(this.codigo + this.produto + this.quantidade + trajeto);
         this.$http.post('http://localhost:8081/lot/create/', {
             cod_lote: this.codigo,
             id_produto: this.produto,
             trajeto: trajeto,
             quantidade_produtos: this.quantidade
         }).then(function(data) {
-            console.log(data);
             alert('Sucesso');
         }).catch((err) => alert(err))},
 
