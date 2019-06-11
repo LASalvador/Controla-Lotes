@@ -8,8 +8,8 @@ export default {
         checkbox5: 0,
         checkbox6: 0,
         checkbox7: 0,
-        codigo: '',
-        produto: ''
+        codigo: 0,
+        produto: 0
     }),
 
     methods: {
@@ -21,7 +21,7 @@ export default {
 
         },
         enviar_dados(){
-            let trajeto;
+            let trajeto = '';
             if (this.checkbox1){
                 trajeto += 'Produção;';
             }
@@ -43,20 +43,20 @@ export default {
             if (this.checkbox7){
                 trajeto += 'Embalagem;';
             }
-            let headers = {
-                'Access-Control-Allow-Methods': 'GET,POST,PUT,DEL',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-            }
+            console.log(this.codigo + this.produto + this.quantidade + trajeto);
         this.$http.post('http://localhost:8081/lot/create/', {
             cod_lote: this.codigo,
             id_produto: this.produto,
-            quantidade_produtos: this.quantidade,
-            trajeto: trajeto
-        }, headers).then(function(data) {
+            trajeto: trajeto,
+            quantidade_produtos: this.quantidade
+        }).then(function(data) {
             console.log(data);
             alert('Sucesso');
-        })},
+        }).catch((err) => alert(err))},
 
     }
+    // cod_lote = req.body.cod_lote;
+        // id_produto = req.body.id_produto;
+        // trajeto = req.body.trajeto;
+        // quantidade_produtos = req.body.quantidade_produtos
 }

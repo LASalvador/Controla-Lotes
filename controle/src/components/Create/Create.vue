@@ -3,12 +3,14 @@
     <v-layout wrap>
   <v-flex xs12 sm12 md3 ml-5>
     <v-text-field
-      label="Codigo"
+      v-model="codigo"
+      label="Cod. lote"
       placeholder=" Ex: 5553">
     </v-text-field>
     <v-text-field
-      label="Produto"
-      placeholder=" Ex: Prótese dentária">
+      v-model="produto"
+      label="Cod. Produto"
+      placeholder=" Ex: 235762 ">
     </v-text-field>
     <v-text-field v-model="quantidade" type="number" label="Quantidade" append-outer-icon="add" @click:append-outer="increment" prepend-icon="remove" @click:prepend="decrement"></v-text-field>
         <h2> Etapas </h2>
