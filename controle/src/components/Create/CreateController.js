@@ -8,8 +8,8 @@ export default {
         checkbox5: 0,
         checkbox6: 0,
         checkbox7: 0,
-        codigo: 0,
-        produto: 0
+        codigo: '',
+        produto: ''
     }),
 
     methods: {

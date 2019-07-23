@@ -2,7 +2,7 @@ export default {
   data: () => ({
     card_visible: false,
     lote: [],
-    id: 0,
+    id: '',
   }),
  methods: {
  	pesquisarLote: function(){

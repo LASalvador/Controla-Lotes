@@ -12,6 +12,9 @@
             <b>status:</b> {{ lote.status }}
           </v-card-text>
         </v-card>
+        <!-- <v-card color="indigo">
+          <v-card-text>Abacate</v-card-text>
+        </v-card> -->
       </v-flex>
     </v-layout>
   </v-content>
